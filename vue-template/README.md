@@ -53,11 +53,7 @@ src
 ├─router                     路由配置
 ├─store                      状态管理
 ├─utils                      公共js工具方法/类
-├─lib                        第三方库，供页面直接用<script>标签引入
-│    vue.min.js
-│    vue-router.min.js
-│    axios.min.js
-│     ......
+├─lib                        
 ├─assets                     资源目录
 │  ├─css                     公共样式及第三方样式库
 │  ├─fonts                   图标字体
@@ -80,9 +76,7 @@ src
     └─error                  404、505等错误提示视图
 ```
 
-## 开始工作
-
-### 环境准备
+## 环境准备（只进行一次即可）
 建议使用npm5或以上版本。windows下安装nodejs8.9.4以上版本即可。
 
 ```bash
@@ -91,6 +85,9 @@ npm config set registry http://。。。
 
 # 更新npm到最新版   
 npm install npm@latest -g
+
+# js风格文件
+npm install -g standard
 
 # 安装 api-designer 到全局   
 npm install -g api-designer
@@ -101,27 +98,29 @@ api-designer
 # 安装 raml2html 到全局   
 npm install -g raml2html
 
+
 ```
+
+## 开始工作
 
 ### 建立新项目
 1. 拷贝本目录到新的工作环境
 2. 重命名项目名称等有关信息。修改package.json文件中，
-
-···json
+```json
 {
 	"name": "项目名称",
 	"version": "1.0.0",
 	"description": "项目描述",
 	"author": "lizhipeng <lizhipeng@gmail.com>"
 }
-···
+```
 
 ### 开发
 ```bash
 # 安装依赖   
 npm install
 
-# 进入开发模式，启动前台应用，localhost:3000 。监听vue文件改动自动刷新浏览器  
+# 进入开发模式，启动前台应用，localhost:8080 (如果被占用，会自动找到第一个可用端口) 。监听vue文件改动自动刷新浏览器  
 npm run dev
 
 # 构建文件到dist目录供发布  
