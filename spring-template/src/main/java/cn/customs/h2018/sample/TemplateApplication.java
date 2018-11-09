@@ -1,4 +1,4 @@
-package cn.customs.h2018.sample.template;
+package cn.customs.h2018.sample;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
